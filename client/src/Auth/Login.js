@@ -7,8 +7,7 @@ import TextField from "@material-ui/core/TextField";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-import { Authcontext } from "../Context/Authcontext";
-
+import { Authcontext } from "../context/Authcontext";
 
 const useStyles = makeStyles((theme) => ({
   form: {
@@ -21,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
 })) 
 
 const Login = (props) => {
+    const classes = useStyles();
     const {setUser} = useContext(Authcontext);
     const [input, setInput] = useState({ email: "", password: "" });
     const [error, setError] = useState({ email: "", password: "" });
